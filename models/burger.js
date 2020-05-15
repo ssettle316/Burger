@@ -2,14 +2,20 @@ var orm = require("../config/orm.js");
 
 var burger = {
   all: function(cb) {
-    //hint:orm.all()
+    orm.all("burger", function(res) {
+      cb(res);
+    });
   },
   create: function(name, cb) {
-    //hint:orm.create()
+    orm.create("burger", name, function(res) {
+      cb(res);
+    }); 
   },
   update: function(id, cb) {
     var condition = "id=" + id;
-    //hint:orm.update
+    orm.update("burger", condition, function(res) {
+      cb(res);
+    });
   }
 };
 
