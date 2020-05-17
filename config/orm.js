@@ -48,7 +48,7 @@ var orm = {
     queryString += ") ";
     queryString += "VALUES (";
     queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+    queryString += "); ";
 
     console.log(queryString);
 
@@ -80,6 +80,6 @@ var orm = {
 
       cb(result);
     });
-  };
-
-module.exports = orm;
+  }
+ };
+ module.exports = orm;
